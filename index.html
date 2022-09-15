@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Identification</title>
+    <link rel="stylesheet" href="./index.css">
+    <script   src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-database.js"></script>
+    <script  src="https://www.gstatic.com/firebasejs/8.10.1/firebase-storage.js"></script>
+
+
+
+    <script>
+const firebaseConfig = {
+  apiKey: "AIzaSyDmM8eyPgqApZ-KBiWJuqFYWNm6xNdaSCQ",
+  authDomain: "identification-bfec2.firebaseapp.com",
+  projectId: "identification-bfec2",
+  storageBucket: "identification-bfec2.appspot.com",
+  messagingSenderId: "167014353913",
+  appId: "1:167014353913:web:99836d1a13f8ab9b204b28",
+  measurementId: "G-1Y9WBS9RMH"
+};
+
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
+    </script>
+</head>
+<body>
+
+    <!-- <div id="container"> -->
+    <h4>Enter Your Full Name</h4>
+    <input type="text" id="ful" placeholder="Enter your name here" >
+    <h4>Enter Your Father Name</h4>
+    <input type="text" id="fath" placeholder="Enter Father name">
+    <h4>Enter Distt Name</h4>
+    <input type="text" id="dist" placeholder="Enter Distt name">
+    <h4>Add Profile Pic</h4>
+   
+    
+
+    <input type="file" id="prof">
+    <button onclick="profPic()">uploadPic</button><br>
+    <progress value="0" max="100" id="bar"></progress><br>
+
+
+
+    <button onclick="addData()"> Save Data</button><a href="./view.html">View Data</a>
+<!-- </div> -->
+    <script src="./index.js"></script>
+</body>
+</html>
