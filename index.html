@@ -29,7 +29,7 @@ firebase.initializeApp(firebaseConfig);
     </script>
 </head>
 <body>
-
+<div class="font">
     <div id="container">
     <h4>Enter Your Full Name</h4>
     <input type="text" id="ful" placeholder="Enter your name here" >
@@ -42,12 +42,14 @@ firebase.initializeApp(firebaseConfig);
     
 
     <input type="file" id="prof">
-    <button onclick="profPic()">uploadPic</button><br>
+    <button onclick="profPic()" >uploadPic</button><br>
     <progress value="0" max="100" id="bar"></progress><br>
 
 
 
     <button onclick="addData()"> Save Data</button><a href="./view.html">View Data</a>
+</div>
+
 </div>
     <script src="./index.js"></script>
 </body>

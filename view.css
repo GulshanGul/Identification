@@ -31,7 +31,7 @@
         }
         
         .companyname{
-            color:White;
+            color: white;
             
             padding: 10px;
             font-size:25px;
@@ -67,6 +67,7 @@
             font-size: 11px;
             text-emphasis: spacing;
             margin-left: 5px;
+            color: black;
         }
         .signature{
             position: absolute;
