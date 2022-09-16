@@ -61,7 +61,7 @@ var metadata = {
       // Upload completed successfully, now we can get the download URL
       uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
         console.log('File available at', downloadURL);
-        firebase.database().ref('Register Data/' ).set({url:downloadURL})
+        firebase.database().ref('Register Data/' ).push({url:downloadURL})
       });
     }
   );

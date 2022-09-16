@@ -2,6 +2,7 @@ var container = document.getElementById("container")
 
 firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   const data = snapshot.val();
+  const _data = snapshot.key
 
   var innerDiv = document.createElement("div")
   var span = document.createElement("span")
@@ -13,7 +14,7 @@ firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   var span3 = document.createElement("span")
   span3.innerHTML = data.Distt
   var photo = document.createElement("img")
-  photo.innerHTML= data.downloadURL
+  photo.innerHTML= _data.URL
   innerDiv3.appendChild(span3)
   span2.appendChild(innerDiv3)
   innerDiv2.appendChild(span2)
