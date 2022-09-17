@@ -1,3 +1,5 @@
+var url =""
+
 const addData=()=>{
     var namee = document.getElementById("ful").value
     var fath = document.getElementById("fath").value
@@ -7,6 +9,7 @@ const addData=()=>{
         name:namee,
         Fathername:fath,
         Distt:dist,
+        url:url
         // profPic:profile,
       });
 }
@@ -61,7 +64,8 @@ var metadata = {
       // Upload completed successfully, now we can get the download URL
       uploadTask.snapshot.ref.getDownloadURL().then((downloadURL) => {
         console.log('File available at', downloadURL);
-        firebase.database().ref('Register Data/' ).push({url:downloadURL})
+        url = downloadURL
+        // firebase.database().ref('Register Data/' ).push({url:downloadURL})
       });
     }
   );
