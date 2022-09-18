@@ -3,6 +3,7 @@ var container = document.getElementById("container")
 firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   const data = snapshot.val();
   const _data = snapshot.key
+  console.log(data)
 
   var innerDiv = document.createElement("div")
   innerDiv.setAttribute("class","padding")
@@ -10,9 +11,11 @@ firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   innerDiv1.setAttribute("class", "font")
   var innerDiv2 = document.createElement("div")
   innerDiv2.setAttribute("class", "companyname")
+  innerDiv2.innerHTML="System Limited"
   var lineBreak = document.createElement("br")
   var span = document.createElement("span")
   span.setAttribute("class", "tab")
+  span.innerHTML="Karachi Pvt LTD"
   var imagDiv = document.createElement("div")
   imagDiv.setAttribute("class", "top")
   var imag = document.createElement("img")
@@ -24,20 +27,29 @@ firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   var para = document.createElement("p")
   para.setAttribute("id", "ful")
   para.innerHTML = data.name
+
+
   var bold = document.createElement("b")
   var para2 = document.createElement("p")
   var detaile = document.createElement("div")
   detaile.setAttribute("id", "fath")
+
+
   var pGraph = document.createElement("p")
-  var thin = document.createElement("b")
+  var thin = document.createElement("div")
   pGraph.innerHTML= data.Fathername
   var pGraph1 = document.createElement("p")
-  var thin1 = document.createElement("b")
+  var thin1 = document.createElement("div")
   pGraph1.innerHTML= data.Distt
+
   var signn = document.createElement("div")
-  signn.setAttribute("class", "signature")
+  signn.setAttribute("class", "pic")
   var signImg = document.createElement("img")
   signImg.setAttribute("src", 'sign.jpg')
+
+
+  var lastImg = document.createElement("div")
+  lastImg.setAttribute("class", "barcode")
   var qrImg = document.createElement("img")
   qrImg.setAttribute("src", 'qr.jpg')
 
@@ -54,22 +66,29 @@ firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
 
 
 
-signImg.appendChild(qrImg)
+// lastImg.appendChild(qrImg)
+// signImg.appendChild(qrImg)
+lastImg.appendChild(qrImg)
+signn.appendChild(lastImg)
 signn.appendChild(signImg)
-thin1.appendChild(signn)
-pGraph1.appendChild(thin1)
+
+
+thin.appendChild(signn)
+thin.appendChild(thin1)
 thin.appendChild(pGraph1)
-pGraph.appendChild(thin)
+detaile.appendChild(thin)
 detaile.appendChild(pGraph)
-para2.appendChild(detaile)
-bold.appendChild(para2)
-para.appendChild(bold)
+nameDiv.appendChild(detaile)
+nameDiv.appendChild(para2)
+nameDiv.appendChild(bold)
 nameDiv.appendChild(para)
 empDiv.appendChild(nameDiv)
-imag.appendChild(empDiv)
+// imag.appendChild(empDiv)
 imagDiv.appendChild(imag)
-span.appendChild(imagDiv)
-lineBreak.appendChild(span)
+imagDiv.appendChild(empDiv)
+
+innerDiv2.appendChild(imagDiv)
+innerDiv2.appendChild(span)
 innerDiv2.appendChild(lineBreak)
 innerDiv1.appendChild(innerDiv2)
 innerDiv.appendChild(innerDiv1)

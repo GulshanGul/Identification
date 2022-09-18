@@ -50,14 +50,16 @@
             left: 102px;
             object-fit: content;
             border:3px solid rgba(255 , 255 , 255 , .2);
+            margin-top: 5px;
             
         }
         .ename{
             position: absolute;
             top: 160px;
             left: 90px;
-            color:white;
+            color:rgb(19, 15, 15);
             font-size:16px;
+            text-transform: uppercase;
         }
         .edetails
         {
@@ -84,8 +86,37 @@
           
         }
 
+        .pic{
+      text-align: center;
+      position: absolute;
+      top: 63%;
+        }
+        .pic img{
+            position: absolute;
+            width: 60px;
+            height: 62px;
+            margin-left: -180px;
+            margin-top: 0px;
+            margin-bottom: -30px;
+            
+        }
+        .barcode{
+          text-align: center;
+          position: absolute;
+          top: 63%;
+          
+        }
+        .barcode img{
 
-        .barcode img
+            position: absolute;
+            width: 65px;
+            height: 65px;
+            margin: 5px;
+            margin-left: -60px;
+            margin-top: 0px;  
+        }
+
+        /* .barcode img
         {
             height: 65px;
             width: 65px;
@@ -112,7 +143,7 @@
             margin:20px;
             background-color:white;
             
-        }
+        } */
         .edetails .Address
         {
            
