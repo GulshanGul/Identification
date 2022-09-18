@@ -26,7 +26,7 @@ firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   nameDiv.setAttribute("class", "ename")
   var para = document.createElement("p")
   para.setAttribute("id", "ful")
-  para.innerHTML = data.name
+  para.innerHTML = data.Distt
 
 
   var bold = document.createElement("b")
@@ -40,7 +40,7 @@ firebase.database().ref('Register Data/').on('child_added', (snapshot) => {
   pGraph.innerHTML= data.Fathername
   var pGraph1 = document.createElement("p")
   var thin1 = document.createElement("div")
-  pGraph1.innerHTML= data.Distt
+  pGraph1.innerHTML= data.name
 
   var signn = document.createElement("div")
   signn.setAttribute("class", "pic")
